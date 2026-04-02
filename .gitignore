@@ -1,0 +1,19 @@
+# Keil uVision build outputs
+*.axf
+*.hex
+*.htm
+*.map
+*.lst
+*.o
+*.crf
+*.d
+*.dep
+*.lnp
+
+# Keil user-specific settings
+*.uvopt
+*.uvgui*
+*.bak
+
+# Keep project sources and configuration files tracked:
+# .uvproj, .sct, .c, .h, .s
