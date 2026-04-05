@@ -33,7 +33,7 @@ extern unsigned char ucTokenNr;
 
 unsigned char ucFindTokensInString (char *pcString);
 
-enum Result eSringToKeyword (char pcStr[], enum KeywordCode *peKeywordCode);
+enum Result eStringToKeyword (char pcStr[], enum KeywordCode *peKeywordCode);
 
 void DecodeTokens(void);
 

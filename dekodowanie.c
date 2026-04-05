@@ -51,7 +51,7 @@ unsigned char ucFindTokensInString (char *pcString) {
 }
 
 // enum Result { OK, ERROR };
-enum Result eSringToKeyword (char pcStr[], enum KeywordCode *peKeywordCode) {
+enum Result eStringToKeyword (char pcStr[], enum KeywordCode *peKeywordCode) {
 
     unsigned char ucKeywordCounter;
 
@@ -75,9 +75,9 @@ void DecodeTokens(void) {
     for(ucTokenCounter = 0; ucTokenCounter < ucTokenNr; ucTokenCounter++) {
         psToken = &asToken[ucTokenCounter];
 
-        if(OK == eSringToKeyword(psToken->uValue.pcString, &eKeyword)) {
+        if(OK == eStringToKeyword(psToken->uValue.pcString, &eKeyword)) {
             psToken->eType = KEYWORD;
-            psToken->uValue.eKeyword = eKeyword; // Dopiero teraz modyfikujemy unię
+            psToken->uValue.eKeyword = eKeyword;
             
         } else if (OK == eHexStringToUInt(psToken->uValue.pcString, &uiNumber)) {
             psToken->eType = NUMBER;
